@@ -1,0 +1,43 @@
+faf_version: "2.5.0"
+generated: "2026-01-29T23:55:00.000Z"
+
+project:
+  name: "faf-validator-action"
+  goal: "GitHub Action to validate .faf files and sync AI context"
+  main_language: "Python"
+  type: "github-action"
+
+stack:
+  runtime: "Python 3.12"
+  build: "GitHub Actions"
+  cicd: "GitHub Actions"
+
+human_context:
+  who: "Developers using FAF standard"
+  what: "GitHub Action that validates project.faf and syncs GEMINI.md"
+  why: "Enforce AI-Readiness standards in CI/CD"
+  where: "GitHub Actions marketplace"
+  when: "On push/PR to validate context"
+  how: "Python + PyYAML + python-frontmatter"
+
+ai_instructions:
+  priority: "Read project.faf first"
+  usage: "Code-first, minimal explanations"
+  message: "Part of FAF ecosystem - IANA registered"
+
+preferences:
+  quality_bar: "zero_errors"
+  commit_style: "conventional_emoji"
+  communication: "direct"
+
+state:
+  phase: "production"
+  version: "1.0.0"
+  status: "green_flag"
+  focus: "WJTTC testing"
+
+scores:
+  faf_score: 100
+  slot_based_percentage: 100
+  total_slots: 9
+  scoring_philosophy: "github-action type - 9 applicable slots"
