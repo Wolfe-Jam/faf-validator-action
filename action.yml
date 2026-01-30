@@ -1,0 +1,26 @@
+name: 'FAF DNA Validator'
+description: 'Ensures project.faf DNA is valid and syncs AI context to GEMINI.md'
+branding:
+  icon: 'check-circle'
+  color: 'orange'
+inputs:
+  min_score:
+    description: 'Minimum AI-Readiness score to pass the build'
+    required: false
+    default: '85'
+runs:
+  using: 'composite'
+  steps:
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.12'
+
+    - name: Install FAF Dependencies
+      shell: bash
+      run: pip install PyYAML python-frontmatter
+
+    - name: Run Bi-Sync and Validation
+      shell: bash
+      run: |
+        python ${{ github.action_path }}/sync_faf.py --min-score ${{ inputs.min_score }}
